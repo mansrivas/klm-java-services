@@ -16,23 +16,6 @@ public class MockServiceImplementation implements MockServiceI {
 	@Autowired
 	private OAuth2RestOperations restO;
 
-	@Override
-	public Object getAirports() {
-		uri = env.getProperty("method.name.list-airports");
-		return restO.getForObject(uri, Object.class);
-	}
-
-	@Override
-	public Object getAirportWithTerm(String term) {
-		uri = env.getProperty("method.name.list-airports") + "?term={term}";
-		return restO.getForObject(uri, Object.class, term);
-	}
-
-	@Override
-	public Object getAirportWithpage(String page, String term) {
-		uri = env.getProperty("method.name.list-airports") + "?term={term}&page={page}";
-		return restO.getForObject(uri, Object.class, term, page);
-	}
 
 	@Override
 	public Object getCalculatedFare(String originCode, String destinationCode) {
