@@ -43,7 +43,7 @@ Query params:
 
 - currency: the requested resulting currency, supported ones are EUR and USD
 
-Resource endpoints:
+Configuration File:
 -------------------
 
 application.properties file help to configure server port and end point URL
